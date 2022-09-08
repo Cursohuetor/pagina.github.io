@@ -1,0 +1,42 @@
+
+/*float left por que al ser div no se le puede poner
+inline sin que pierda las dimensiones de width y height, 
+por tanto se dan block y se les añade float.*/
+.a, .b, .c {
+    width: 25%;
+    height: 100px;
+    float: left;
+
+    }
+.a, .b, .c { 
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/*tiene margen para poder centrarlo respecto a izquierda solo 
+en el primer elemento*/
+.a{
+    background: red;
+     margin-left: 10%;
+    }
+
+.b{
+    background: green;
+    }
+
+.c{
+    background: orange;
+    }
+
+/* aquí se anula el float con none y tiene margen para poder centrarlo respecto a izquierda en 
+este caso que va en block es para todos*/
+@media (max-width: 618px)
+{
+    .a, .b, .c {
+    width:80% ;
+    height: 50px;
+    display: block;
+    float: none;
+    margin-left: 10%;
+    }
+    
+}
